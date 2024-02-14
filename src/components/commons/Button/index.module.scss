@@ -1,0 +1,25 @@
+.button {
+    padding: 10px 20px;
+    box-shadow: 1px 1px 1px 2px #030303;
+    font-size: 14px;
+    font-family: var(--poppins);
+    border-radius: 3px;
+    cursor: pointer;
+    transition:
+        background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1),
+        transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #030303;
+        font-size: 14px;
+        font-family: var(--poppins);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

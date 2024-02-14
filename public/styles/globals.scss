@@ -1,0 +1,59 @@
+@import 'utils.scss';
+
+* {
+    padding: 0;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+:root {
+    font-family: var(--potter-one);
+}
+
+img {
+    vertical-align: text-bottom;
+}
+
+.default-layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    padding: 20px;
+
+    &__main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-grow: 1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.home {
+    text-align: center;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        & > *:first-child {
+            flex-grow: 1;
+        }
+
+        & > *:last-child {
+            flex-grow: 0.2;
+        }
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+}
