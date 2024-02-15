@@ -1,13 +1,21 @@
 .input {
+    --red: #9b0303;
+    --black: #030303;
+    --grey: #f0f0f0;
     font-size: 14px;
     width: calc(100% - 20px);
     padding: 10px;
     border-radius: 2px;
     font-family: var(--poppins);
-    background-color: #f0f0f0;
-    box-shadow: 1px 1px 1px 2px #030303;
+    background-color: var(--grey);
+    box-shadow: 1px 1px 1px 2px var(--black);
     outline: none !important;
     transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &--error {
+        box-shadow: 1px 1px 1px 2px var(--red);
+        color: var(--red);
+    }
 
     &:focus {
         background-color: #fff;

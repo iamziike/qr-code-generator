@@ -1,4 +1,4 @@
-@import 'utils.scss';
+// @import 'utils.scss';
 
 * {
     padding: 0;
@@ -8,11 +8,17 @@
 }
 
 :root {
-    font-family: var(--potter-one);
+    & > * {
+        font-family: var(--potter-one);
+    }
 }
 
 img {
     vertical-align: text-bottom;
+}
+
+.text-gray {
+    color: rgb(192, 192, 192);
 }
 
 .default-layout {
