@@ -20,3 +20,5 @@ We're always looking to improve and expand the capabilities of our QR code gener
 ---
 
 Thank you for visiting the QR Code Generator Web App repository. We're excited to see how you use this tool to create innovative QR codes for yourself🚀.
+
+---
