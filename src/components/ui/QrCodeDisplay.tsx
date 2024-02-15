@@ -2,8 +2,8 @@
 
 import React, { FC, useEffect } from "react";
 import Link from "next/link";
-import Button from "../commons/Button";
 import Image from "next/image";
+import ShareButton from "../commons/ShareButton";
 
 interface Props {
   url: string;
@@ -21,12 +21,14 @@ const QrCodeDisplay: FC<Props> = ({ url, imgSrc }) => {
           <Image src={imgSrc} alt="" width={359} height={359} />
           <p className="text-gray">{url}</p>
         </Link>
-        <Button
-          className="bg-black text-white px-5"
-          style={{ fontFamily: `var(--potter-one)` }}
-        >
-          Share
-        </Button>
+        <ShareButton
+          shareData={{
+            title: "QR Code",
+            text: "A Qr was shared to you",
+            url: window.location.href,
+          }}
+          label="Share this"
+        />
       </section>
     );
   }
