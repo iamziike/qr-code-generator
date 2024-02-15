@@ -25,7 +25,7 @@ const QrCodeDisplay: FC<Props> = ({ url, imgSrc }) => {
           shareData={{
             title: "QR Code",
             text: "A Qr was shared to you",
-            url: window.location.href,
+            url: `${window.location.origin}/url?id=${url}`,
           }}
           label="Share this"
         />
