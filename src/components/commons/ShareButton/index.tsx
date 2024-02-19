@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC } from "react";
 import Button from "../Button";
 import toast from "react-hot-toast";

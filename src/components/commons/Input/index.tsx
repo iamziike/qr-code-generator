@@ -15,7 +15,7 @@ const Input: FC<Props> = ({ error, isTouched, ...props }) => {
     <div style={{ position: "relative" }}>
       <input
         {...props}
-        className={clsx(styles?.input, {
+        className={clsx(`${styles?.input} ${props?.className}`, {
           [styles?.["input--error"]]: isTouched && error,
         })}
       />

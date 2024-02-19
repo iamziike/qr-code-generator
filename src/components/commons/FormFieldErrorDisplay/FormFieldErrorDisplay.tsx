@@ -22,7 +22,7 @@ const FormFieldErrorDisplay: React.FC<Props> = ({ error, style }) => {
           style={{
             marginBottom: "0",
             paddingTop: "0.25rem",
-            fontSize: "0.875rem",
+            fontSize: "0.675rem",
           }}
         >
           {error}

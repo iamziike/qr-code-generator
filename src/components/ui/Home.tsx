@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <section className="home">
+    <section className="home text-center">
       <h1>
         Generate QR Codes <br /> Instantly
       </h1>
@@ -28,16 +28,22 @@ const Home = () => {
           validationSchema={yup.object({ url: validationSchema.url })}
         >
           {({ handleChange, touched, errors, isValid }) => (
-            <Form className="mt-4">
+            <Form className="mt-4 d-flex justify-content-between gap-2 gap-md-4 flex-column flex-md-row">
               <Input
                 name="url"
                 placeholder="Enter url to generate QR code"
                 onChange={handleChange}
                 error={errors?.url}
                 isTouched={touched?.url}
+                className="w-100"
               />
 
-              <Button disabled={!isValid}>Generate</Button>
+              <Button
+                disabled={!isValid}
+                className="mt-2 m-md-0 mx-auto px-5 px-md-4"
+              >
+                Generate
+              </Button>
             </Form>
           )}
         </Formik>

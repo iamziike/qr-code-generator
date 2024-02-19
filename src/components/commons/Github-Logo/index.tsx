@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const GithubLogo = () => {
   return (
-    <Link href="https://iamziike.vercel.app" className="bounce">
+    <Link href="https://github.com/iamziike" className="bounce">
       <Image
         src="/assets/github.png"
         alt="Github Icon"

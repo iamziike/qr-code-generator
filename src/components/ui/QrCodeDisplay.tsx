@@ -1,9 +1,8 @@
-"use client";
-
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ShareButton from "../commons/ShareButton";
+import { headers } from "next/headers";
 
 interface Props {
   url: string;
@@ -11,7 +10,8 @@ interface Props {
 }
 
 const QrCodeDisplay: FC<Props> = ({ url, imgSrc }) => {
-  useEffect(() => {}, []);
+  const headersList = headers();
+  const domain = headersList.get("host");
 
   if (url) {
     return (
@@ -25,7 +25,7 @@ const QrCodeDisplay: FC<Props> = ({ url, imgSrc }) => {
           shareData={{
             title: "QR Code",
             text: "A Qr was shared to you",
-            url: `${window.location.origin}/url?id=${url}`,
+            url: `${domain}/url?id=${url}`,
           }}
           label="Share this"
         />
@@ -33,9 +33,7 @@ const QrCodeDisplay: FC<Props> = ({ url, imgSrc }) => {
     );
   }
 
-  location.assign("/");
-
-  return <></>;
+  // redirect("/");
 };
 
 export default QrCodeDisplay;
